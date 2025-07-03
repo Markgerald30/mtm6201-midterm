@@ -441,3 +441,26 @@ footer p {
     font-size: 1.1rem;
     text-align: center;
 }
+
+/* Media Queries */
+
+/* tablet style */
+@media screen and (min-width: 768px) {
+    :root {
+        --h1-size: 3rem;
+        --h2-size: 2.375rem;
+        --h3-size: 1.75rem; 
+        --body-size: 1rem;
+    }
+
+}
+
+/* desktop style */
+@media screen and (min-width: 1440px) {
+    :root {
+        --h1-size: 3.875rem;
+        --h2-size: 3rem;  
+        --h3-size: 2rem; 
+        --body-size: 1rem;
+    }
+}
