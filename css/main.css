@@ -425,3 +425,19 @@ nav ul li a:focus {
     font-weight: bold;
     margin-bottom: 0;
 }
+
+/* footer section */
+footer {
+    background-color: var(--black);
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    color: var(--white);
+    border-top: var(--white) 1px solid;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
