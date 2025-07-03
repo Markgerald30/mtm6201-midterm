@@ -133,7 +133,7 @@ nav ul li a:focus {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/hero-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -222,4 +222,73 @@ nav ul li a:focus {
     font-size: var(--h3-size);
     font-weight: 800;
     margin-bottom: 1rem;
+}
+
+/* menu section */
+.menu-location {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/coffee-shop.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 100vh; */
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-location-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+}
+
+.menu-location-cards h4 {
+    color: var(--primary-color);
+    font-size: var(--h3-size);
+    padding: 10px 0;
+}
+
+.menu-location-cards p {
+    color: var(--white);
+    font-size: 2.75rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    line-height: 3.5rem;
+}
+
+.our-menu .button {
+    color: var(--black);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.our-menu .button:hover,
+.our-menu .button:focus {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.locations .button {
+    color: var(--white);
+    background-color: transparent;
+    border: 2px solid var(--white);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.locations .button:hover,
+.locations .button:focus {
+    background-color: var(--white);
+    color: var(--black);
 }
