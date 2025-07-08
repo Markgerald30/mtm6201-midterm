@@ -114,7 +114,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li i {
+nav i {
     font-size: 1.5rem;
     color: var(--white);
 }
@@ -196,7 +196,7 @@ nav ul li a:focus {
 .offer-cards {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat (3,1fr);
+    grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
 }
@@ -368,7 +368,7 @@ nav ul li a:focus {
 
 .testimonial-cards {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -470,44 +470,44 @@ footer p {
 
     .offer-cards {
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 1fr;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
     }
 
     .offer-1 {
-        grid-column: 1 / span 2;
+        grid-column: span 2;
     }
 
     .offer-2 {
-        grid-column: 3 / span 2;
+        grid-column: span 2;
     }
 
 
     .offer-3 {
-        grid-row: 2 / span 2;
-        grid-column: 2 / span 2;
+        grid-row: 2 / 2;
+        grid-column: 2 / 4;
     }
 
     .testimonial-cards {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         gap: 1rem;
     }
 
     .testimonial:nth-child(1) {
-        grid-column: 1 / span 2;
+        grid-column: span 4;
     }
 
     .testimonial:nth-child(2) {
-        grid-column: 3 / span 2;
+        grid-column: span 4;
     }
 
 
     .testimonial:nth-child(3) {
-        grid-row: 2 / span 2;
-        grid-column: 2 / span 2;
+        grid-row: 2 / 3;
+        grid-column: 3 / 7;
     }
     
 }
@@ -524,4 +524,63 @@ footer p {
     h1 { font-size: var(--h1-size); }
     h2 { font-size: var(--h2-size); }
     h3 { font-size: var(--h3-size); }
-}
+
+    .fa-solid .fa-bars {
+        display: none;
+    }
+
+    .offer-cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+   
+    .offer-1 {
+        grid-column: 1 / 3;
+    }
+
+    .offer-2 {
+        grid-column: 3 / 5;
+    }
+
+    .offer-3 {
+        grid-row: 1 / 2;
+        grid-column: 5 / 7;
+    }
+
+    .menu-location-cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-us img {
+        width: 50%;
+    }
+
+    .testimonial-cards {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .testimonial:nth-child(1) {
+        grid-column: 1 / 3;
+    }
+
+    .testimonial:nth-child(2) {
+        grid-column: 3 / 5;
+    }
+
+    .testimonial:nth-child(3) {
+        grid-row: 1 / 2;
+        grid-column: 5 / 7;
+    }
+
+}   
