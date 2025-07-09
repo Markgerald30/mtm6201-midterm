@@ -1,10 +1,10 @@
-/* Custom Properties */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Custom Properties */
 :root {
     /* Colors */
     --primary-color: #d69e3d;
@@ -72,6 +72,7 @@ ul {
     color: var(--white);
 }
 
+/* wrapper/container default */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -79,6 +80,7 @@ ul {
     padding: 0 1rem;
 }
 
+/* skip link */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -94,7 +96,7 @@ ul {
     top: 0; 
 }
 
-/* navigation */
+/* navigation section */
 nav {
     width: 100%;
     position: absolute;
@@ -108,7 +110,7 @@ nav .container {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 0 10px 0;
     margin: 0 25px 0 25px;
     border-bottom: var(--white) 1px groove;
 }
@@ -158,13 +160,14 @@ nav .logo {
     }
 }
 
+/* main navigation disappear */
 @media screen and (max-width: 1440px) {
     nav ul li a {
         display: none;
     }
 }
 
-/* header */
+/* header section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/hero-background.jpg);
     background-size: cover;
@@ -213,14 +216,16 @@ nav .logo {
 
 .welcome h2 {
     padding-bottom: 1rem;
-    font-weight: 800;
-    font-size: var(--h3-size)
+    font-size: var(--h3-size);
+    color: var(--primary-color)
 }
 
 .welcome h3 {
-    padding-bottom: 5px;
-    color: var(--primary-color);
-    font-size: var(--h2-size);
+    padding-bottom: 1rem;
+    color: var(--black);
+    font-size: var(--h1-size);
+    font-weight: bolder;
+    width: 80%;
 }
 
 .welcome-imgs img{
@@ -269,7 +274,7 @@ nav .logo {
 
 .offers h3 {
     color: var(--black);
-    font-size: 2.75rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
@@ -279,7 +284,7 @@ nav .logo {
     margin-bottom: 1rem;
 }
 
-/* menu section */
+/* menu - location section */
 .menu-location {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/coffee-shop.jpeg);
     background-size: cover;
@@ -311,6 +316,10 @@ nav .logo {
     line-height: 3rem;
 }
 
+.our-menu {
+    padding: 1rem;
+}
+
 .our-menu .button {
     color: var(--black);
     background-color: var(--white);
@@ -328,6 +337,10 @@ nav .logo {
     background-color: var(--primary-dark);
     border: 2px solid var(--primary-dark);
     color: var(--white);
+}
+
+.locations {
+    padding: 1rem;
 }
 
 .locations .button {
@@ -443,6 +456,14 @@ nav .logo {
     overflow: hidden;
 }
 
+.testimonial::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .testimonial img {
     width: 100%;
     height: 100%;
@@ -455,13 +476,8 @@ nav .logo {
     left: 0;
     right: 0;
     padding: 2rem;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0) 100%
-    );
     color: var(--white);
+    z-index: 2;
 }
 
 .testimonial-content p {
@@ -493,10 +509,13 @@ footer p {
     text-align: center;
 }
 
+
 /* Media Queries */
 
 /* tablet style */
 @media screen and (min-width: 768px) {
+
+    /* Custom Properties */
     :root {
         --h1-size: 3rem;
         --h2-size: 2.375rem;
@@ -520,8 +539,21 @@ footer p {
     }
 
     .menu-location-cards h2 {
-        font-size: var(--h2-size);
+        font-size: var(--h3-size);
         line-height: 4rem;
+    }
+
+    .offers h2 {
+        color: var(--primary-color);
+        font-size: var(--h3-size);
+        font-weight: bolder;
+        padding-bottom: 1rem;
+    }
+
+    .offers h3 {
+        color: var(--black);
+        font-size: var(--h1-size);
+        margin-bottom: 0.5rem;
     }
 
     .offer-cards {
@@ -549,7 +581,7 @@ footer p {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(8, 1fr);
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .testimonial:nth-child(1) {
@@ -570,6 +602,7 @@ footer p {
 
 /* desktop style */
 @media screen and (min-width: 1440px) {
+    /* custom properties */
     :root {
         --h1-size: 3.875rem;
         --h2-size: 3rem;  
@@ -583,6 +616,19 @@ footer p {
 
     nav button {
         display: none;
+    }
+
+    .offers h2 {
+        color: var(--primary-color);
+        font-size: var(--h3-size);
+        font-weight: bolder;
+        padding-bottom: 1rem;
+    }
+
+    .offers h3 {
+        color: var(--black);
+        font-size: var(--h1-size);
+        margin-bottom: 0.5rem;
     }
 
     .offer-cards {
@@ -629,6 +675,7 @@ footer p {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
     }
 
     .testimonial:nth-child(1) {
